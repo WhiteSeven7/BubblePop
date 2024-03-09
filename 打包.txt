@@ -1,0 +1,1 @@
+pyinstaller -D -w -n=BubblePop --icon=icon.ico game.py

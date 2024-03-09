@@ -388,7 +388,6 @@ class Windows:
         pygame.font.init()
         self.surface = pygame.display.set_mode(SIZE)
         self.clock = pygame.time.Clock()
-        pygame.display.set_caption("Bubble Pop")
         self.quit = False
 
 
@@ -414,8 +413,6 @@ class Windows:
 
 
     def safe_quit(self):
-        # pygame.font.quit()
-        # pygame.mixer.quit()
         pygame.quit()
         sys.exit()
 
@@ -424,6 +421,8 @@ class Windows:
 class Game(Windows):
     def __init__(self) -> None:
         super().__init__()
+        pygame.display.set_caption("Bubble Pop")
+        pygame.display.set_icon(pygame.image.load("image/colorful/0.png"))
         # 背景颜色
         self.bg_colors = [
             "#7092BE", "#C8BFE7", "#99D9EA", "#EFE4B0", "#8EEB96", "#EDB58B"
@@ -493,6 +492,7 @@ class Game(Windows):
         """切换运行状态"""
         if active == "game":
             if self.active == 'none':
+                self.bg_color = random.choice(self.bg_colors)
                 self.time_sys.re_start()
                 self.cbubble_sys.re_start()
                 self.score_sys.re_start()

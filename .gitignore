@@ -1,3 +1,6 @@
 test.py
 杂项/
 Bubblepoppinganimation/
+build/
+dist/
+*.spec
