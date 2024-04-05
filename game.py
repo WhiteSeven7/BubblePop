@@ -503,13 +503,13 @@ class Game(Windows):
         if kind == 0:  # 常
             self.score_sys.add(2)
         elif kind == 1:  # 毒
-            self.time_sys.add_time(-1000)
-            self.score_sys.add(-3)
+            self.time_sys.add_time(-5000)
+            self.score_sys.add(-5)
         elif kind == 2:  # 红
-            self.time_sys.add_time(1500)
+            self.time_sys.add_time(3000)
             self.score_sys.add(1)
         elif kind == 3:  # 彩
-            self.score_sys.add(10)
+            self.score_sys.add(12)
 
 
 if __name__ == '__main__':
